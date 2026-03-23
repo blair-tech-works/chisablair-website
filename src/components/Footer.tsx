@@ -41,7 +41,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="space-y-2">
-          <p className="text-base font-light">
+          <p>
             <a
               href="mailto:info@chisablair.com"
               className="hover:opacity-60 transition-opacity"
@@ -49,7 +49,7 @@ export default function Footer() {
               info@chisablair.com
             </a>
           </p>
-          <p className="text-base font-light">
+          <p>
             Washington | Idaho
           </p>
         </div>

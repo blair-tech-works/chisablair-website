@@ -20,10 +20,10 @@ export default function PacificNorthwestPage() {
           priority
         />
         <div className="relative z-10 text-center text-white">
-          <h1 className="font-serif text-[46px] font-medium mb-4 leading-[1.33] drop-shadow-lg">
+          <h1 className="font-serif mb-4 drop-shadow-lg">
             Washington & Idaho
           </h1>
-          <p className="text-lg font-light mb-10 drop-shadow-md">
+          <p className="mb-10 drop-shadow-md">
             Your options have no borders.
           </p>
           <a

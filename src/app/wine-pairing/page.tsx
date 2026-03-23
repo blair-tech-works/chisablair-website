@@ -25,7 +25,7 @@ export default function WinePairingPage() {
       <section className="py-6 px-[6%] text-center">
         <Link
           href="/contact"
-          className="text-lg font-light text-black underline underline-offset-4 hover:opacity-60 transition-opacity"
+          className="text-black underline underline-offset-4 hover:opacity-60 transition-opacity"
         >
           Request an Estimate
         </Link>
@@ -34,10 +34,10 @@ export default function WinePairingPage() {
       {/* Main Content */}
       <section className="py-12 md:py-20 px-[6%]">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-serif text-[46px] font-medium mb-8 leading-[1.33]">
+          <h1 className="font-serif mb-8">
             Casa Vino. A Private Dining Experience.
           </h1>
-          <p className="text-lg leading-8 font-light mb-10 max-w-2xl mx-auto">
+          <p className="mb-10 max-w-2xl mx-auto">
             Experience an exclusive in-home wine pairing service. Our local wine
             representative will present bottles from your favorite tasting
             rooms, or introduce you to new wines. Together with a local chef or
@@ -49,23 +49,23 @@ export default function WinePairingPage() {
 
           {/* Pricing */}
           <div className="max-w-2xl mx-auto text-left mb-12">
-            <p className="text-lg leading-8 font-light mb-6">
+            <p className="mb-6">
               We work with a variety of budgets so be sure to &ldquo;Request an
               Estimate&rdquo; for design-specific pricing. Standard price ranges
               are as follows:
             </p>
             <ul className="space-y-4">
-              <li className="text-lg leading-8 font-light">
+              <li>
                 Wine-focused, 10-12 attendees. In-home wine tasting including
                 charcuterie or light hors d&apos;oeuvres —{" "}
                 <span className="font-medium">$250+</span>
               </li>
-              <li className="text-lg leading-8 font-light">
+              <li>
                 Three-course dining (plated or family-style catering) including
                 wine pairing for up to 10 attendees —{" "}
                 <span className="font-medium">$750+</span>
               </li>
-              <li className="text-lg leading-8 font-light">
+              <li>
                 On-site chef, food & wine pairing, 3-7 courses for 8-10
                 attendees — <span className="font-medium">$1,100+</span>
               </li>

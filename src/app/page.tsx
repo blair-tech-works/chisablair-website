@@ -7,13 +7,13 @@ export default function Home() {
       {/* Hero Section — narrow centered, small height */}
       <section className="py-20 md:py-28 px-[6%]">
         <div className="max-w-[600px] mx-auto text-center">
-          <p className="text-lg font-light mb-4">
+          <p className="mb-4">
             Design & Event Services
           </p>
-          <h3 className="font-serif text-[46px] font-medium mb-8 leading-[1.33]">
+          <h3 className="font-serif mb-8">
             We take the stress out of your event
           </h3>
-          <p className="text-lg font-light mb-8">
+          <p className="mb-8">
             Book your FREE Consultation
           </p>
           <a
@@ -32,10 +32,10 @@ export default function Home() {
       <section className="py-16 md:py-20 px-[6%]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="font-serif text-[46px] font-medium mb-4 leading-[1.33]">
+            <h3 className="font-serif mb-4">
               Corporate & Nonprofit Events
             </h3>
-            <p className="text-lg font-light mb-8">
+            <p className="mb-8">
               Design & Coordination | Training | Retreats | Fundraisers
             </p>
             <Link href="/corporate-nonprofit" className="btn-primary">
@@ -65,10 +65,10 @@ export default function Home() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <h3 className="font-serif text-[46px] font-medium mb-4 leading-[1.33]">
+            <h3 className="font-serif mb-4">
               Casa Vino | Dining Experience
             </h3>
-            <p className="text-lg font-light mb-8">
+            <p className="mb-8">
               Food & Wine | Private Tasting | Catering
             </p>
             <Link href="/wine-pairing" className="btn-primary">
@@ -82,10 +82,10 @@ export default function Home() {
       <section className="py-16 md:py-20 px-[6%]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="font-serif text-[46px] font-medium mb-4 leading-[1.33]">
+            <h3 className="font-serif mb-4">
               A Casa | Interior Design & Staging
             </h3>
-            <p className="text-lg font-light mb-8">
+            <p className="mb-8">
               Interior Design | Home Staging | Open House & Real Estate Services
             </p>
             <Link href="/design-staging" className="btn-primary">

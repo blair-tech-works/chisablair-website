@@ -20,7 +20,7 @@ export default function DesignStagingPage() {
           priority
         />
         <div className="relative z-10 text-center text-white">
-          <h1 className="font-serif text-[46px] font-medium leading-[1.33] drop-shadow-lg">
+          <h1 className="font-serif drop-shadow-lg">
             Custom Interior & Real Estate Services
           </h1>
         </div>
@@ -31,10 +31,10 @@ export default function DesignStagingPage() {
       <section className="py-16 md:py-24 px-[6%]">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="font-serif text-[36px] font-medium mb-6 leading-[1.33]">
+            <h2 className="font-serif mb-6">
               Interior Design
             </h2>
-            <p className="text-lg leading-8 font-light">
+            <p>
               We will pair you with our interior design partners to create
               custom concepts for your home or office space. We can accommodate
               a range of budgets and styles.
@@ -42,10 +42,10 @@ export default function DesignStagingPage() {
           </div>
 
           <div>
-            <h2 className="font-serif text-[36px] font-medium mb-6 leading-[1.33]">
+            <h2 className="font-serif mb-6">
               Staging
             </h2>
-            <p className="text-lg leading-8 font-light">
+            <p>
               Whether you are selling a home, leasing property, or furnishing a
               vacation rental we have the designer to accommodate your unique
               style. Are you a Realtor? We can pair you with an event

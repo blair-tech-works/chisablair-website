@@ -54,16 +54,16 @@ export default function BlogPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <p className="text-base font-light text-gray-500 mb-2">
+              <p className="text-gray-500 mb-2">
                 {post.date}
               </p>
-              <h2 className="font-serif text-[28px] font-medium mb-3 leading-[1.33]">
+              <h2 className="font-serif mb-3">
                 {post.title}
               </h2>
-              <p className="text-lg font-light leading-7 text-gray-700 mb-4">
+              <p className="leading-7 text-gray-700 mb-4">
                 {post.excerpt}
               </p>
-              <span className="text-lg font-light text-black underline underline-offset-4 hover:opacity-60 transition-opacity cursor-pointer">
+              <span className="text-black underline underline-offset-4 hover:opacity-60 transition-opacity cursor-pointer">
                 Read More
               </span>
             </article>
