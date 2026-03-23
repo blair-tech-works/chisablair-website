@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      {/* Hero Section — narrow centered, small height */}
+      {/* Hero Section — narrow centered, inset */}
       <section className="py-20 md:py-28 px-[6%]">
         <div className="max-w-[600px] mx-auto text-center">
           <p className="mb-4">
@@ -28,79 +28,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Corporate & Nonprofit Events — wide, text left + image right */}
-      <section className="py-16 md:py-20 px-[6%]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="font-serif mb-4">
-              Corporate & Nonprofit Events
-            </h3>
-            <p className="mb-8">
-              Design & Coordination | Training | Retreats | Fundraisers
-            </p>
-            <Link href="/corporate-nonprofit" className="btn-primary">
-              See Packages
-            </Link>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src="/images/wine-dining.jpg"
-              alt="Corporate & Nonprofit Events"
-              fill
-              className="object-cover"
-            />
-          </div>
+      {/* Corporate & Nonprofit Events — full-bleed text section */}
+      <section className="py-16 md:py-20 px-[3vw]">
+        <div className="max-w-[2000px] mx-auto">
+          <h3 className="font-serif mb-4">
+            Corporate & Nonprofit Events
+          </h3>
+          <p className="mb-8">
+            Design & Coordination | Training | Retreats | Fundraisers
+          </p>
+          <Link href="/corporate-nonprofit" className="btn-primary">
+            See Packages
+          </Link>
         </div>
       </section>
 
-      {/* Casa Vino | Dining Experience — image left + text right */}
-      <section className="py-16 md:py-20 px-[6%]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-[4/3] overflow-hidden order-2 md:order-1">
-            <Image
-              src="/images/wine-dining.jpg"
-              alt="Casa Vino Dining Experience"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="order-1 md:order-2">
-            <h3 className="font-serif mb-4">
-              Casa Vino | Dining Experience
-            </h3>
-            <p className="mb-8">
-              Food & Wine | Private Tasting | Catering
-            </p>
-            <Link href="/wine-pairing" className="btn-primary">
-              Learn More
-            </Link>
-          </div>
+      {/* Full-width image — wine/dining */}
+      <section className="relative w-full h-[60vh] md:h-[80vh]">
+        <Image
+          src="/images/wine-dining.jpg"
+          alt="Corporate & Nonprofit Events"
+          fill
+          className="object-cover"
+        />
+      </section>
+
+      {/* Casa Vino | Dining Experience — full-bleed text section */}
+      <section className="py-16 md:py-20 px-[3vw]">
+        <div className="max-w-[2000px] mx-auto">
+          <h3 className="font-serif mb-4">
+            Casa Vino | Dining Experience
+          </h3>
+          <p className="mb-8">
+            Food & Wine | Private Tasting | Catering
+          </p>
+          <Link href="/wine-pairing" className="btn-primary">
+            Learn More
+          </Link>
         </div>
       </section>
 
-      {/* A Casa | Interior Design & Staging — text left + image right */}
-      <section className="py-16 md:py-20 px-[6%]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="font-serif mb-4">
-              A Casa | Interior Design & Staging
-            </h3>
-            <p className="mb-8">
-              Interior Design | Home Staging | Open House & Real Estate Services
-            </p>
-            <Link href="/design-staging" className="btn-primary">
-              Learn More
-            </Link>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src="/images/interior-design.jpg"
-              alt="Interior Design & Staging"
-              fill
-              className="object-cover"
-            />
-          </div>
+      {/* Full-width image — interior design */}
+      <section className="relative w-full h-[60vh] md:h-[80vh]">
+        <Image
+          src="/images/interior-design.jpg"
+          alt="Interior Design"
+          fill
+          className="object-cover"
+        />
+      </section>
+
+      {/* A Casa | Interior Design & Staging — full-bleed text section */}
+      <section className="py-16 md:py-20 px-[3vw]">
+        <div className="max-w-[2000px] mx-auto">
+          <h3 className="font-serif mb-4">
+            A Casa | Interior Design & Staging
+          </h3>
+          <p className="mb-8">
+            Interior Design | Home Staging | Open House & Real Estate Services
+          </p>
+          <Link href="/design-staging" className="btn-primary">
+            Learn More
+          </Link>
         </div>
+      </section>
+
+      {/* Full-width image — architecture */}
+      <section className="relative w-full h-[60vh] md:h-[80vh]">
+        <Image
+          src="/images/architecture.jpg"
+          alt="Design & Staging"
+          fill
+          className="object-cover"
+        />
       </section>
     </>
   );
