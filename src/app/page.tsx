@@ -13,13 +13,17 @@ export default function Home() {
           <h3 className="font-serif text-[46px] font-medium mb-8 leading-[1.33]">
             We take the stress out of your event
           </h3>
+          <p className="text-lg font-light mb-8">
+            Book your FREE Consultation
+          </p>
           <a
-            href="https://squareup.com/appointments/book/chisablair"
+            href="https://squareup.com/appointments/book/wbp736q14ceh80/LHXAXTXBFAJXM/start"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg font-light underline underline-offset-4 hover:opacity-60 transition-opacity"
+            className="inline-block px-7 py-3 text-sm font-medium uppercase tracking-[1px] text-white hover:opacity-80 transition-opacity"
+            style={{ backgroundColor: "rgb(136, 151, 167)" }}
           >
-            Book your FREE Consultation
+            Book Now
           </a>
         </div>
       </section>
