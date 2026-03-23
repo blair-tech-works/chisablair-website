@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: "Proxima Nova", "proxima-nova", system-ui, -apple-system, sans-serif;
-  --font-serif: "LTC Bodoni 175", "ltc-bodoni-175", "Georgia", serif;
+  --font-sans: "proxima-nova", "Proxima Nova", system-ui, -apple-system, sans-serif;
+  --font-serif: "ltc-bodoni-175", "LTC Bodoni 175", "Georgia", serif;
 }
 
 :root {
@@ -14,25 +14,43 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Button styles matching Squarespace */
+/* Nav link styles — matches original: proxima-nova 18.5px weight 300, no uppercase */
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.nav-link:hover {
+  opacity: 0.6;
+}
+
+/* Button styles — matches original: 16px weight 500, 0.32px letter-spacing, no uppercase */
 .btn-primary {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 22px 37px;
   background-color: #000;
   color: #fff;
   border-radius: 300px;
   font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  text-transform: none;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }

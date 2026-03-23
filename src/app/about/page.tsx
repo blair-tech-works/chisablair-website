@@ -21,22 +21,22 @@ export default function AboutPage() {
       </section>
 
       {/* About Content */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-16 md:py-24 px-[6%]">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="font-serif text-3xl md:text-4xl font-normal mb-2 leading-tight">
+            <h1 className="font-serif text-[46px] font-medium mb-2 leading-[1.33]">
               Chisa Blair, MBA
             </h1>
-            <p className="text-sm tracking-[1px] font-light mb-8 text-gray-600">
+            <p className="text-lg font-light mb-8 text-gray-600">
               Owner | Designer, WA
             </p>
-            <p className="text-sm leading-7 font-light mb-6">
+            <p className="text-lg leading-8 font-light mb-6">
               With more than 10 years of Design, Coordination & Networking
               expertise, you can count on me to help you bring your vision to
               life. Seeing a collaborative idea come to fruition is my goal. I
               always get the job done above and beyond expectations.
             </p>
-            <p className="text-sm leading-7 font-light italic">
+            <p className="text-lg leading-8 font-light italic">
               We are guaranteed to take the stress out of your design project or
               event. Allowing you to be fully present, and in the moment. No
               Stress. Just Enjoy. ~ Chisa B.

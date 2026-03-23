@@ -30,63 +30,73 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="bg-white border-b border-gray-100">
-      {/* Logo */}
-      <div className="flex justify-center py-6 md:py-8">
+    <header className="bg-white">
+      {/* Desktop: Logo left, Nav right — same row */}
+      <div className="hidden md:flex items-center px-[3vw] py-[3vw]">
+        {/* Logo */}
+        <div className="shrink-0">
+          <Link href="/">
+            <Image
+              src="/images/logo.png"
+              alt="Chisa Blair | Design & Events"
+              width={353}
+              height={205}
+              className="h-[205px] w-auto"
+              priority
+            />
+          </Link>
+        </div>
+
+        {/* Nav — right-aligned */}
+        <nav className="flex-1 flex justify-end items-center gap-6">
+          {navItems.map((item) => (
+            <div
+              key={item.label}
+              className="relative"
+              onMouseEnter={() =>
+                item.children && setOpenDropdown(item.label)
+              }
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              {item.children ? (
+                <button className="nav-link">
+                  {item.label}
+                </button>
+              ) : (
+                <Link href={item.href} className="nav-link">
+                  {item.label}
+                </Link>
+              )}
+              {item.children && openDropdown === item.label && (
+                <div className="absolute top-full right-0 bg-white shadow-md py-2 min-w-[200px] z-50">
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.label}
+                      href={child.href}
+                      className="block px-6 py-2 nav-link"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+      </div>
+
+      {/* Mobile: Logo centered, hamburger right */}
+      <div className="md:hidden flex items-center justify-between px-[6vw] py-[6vw]">
         <Link href="/">
           <Image
             src="/images/logo.png"
             alt="Chisa Blair | Design & Events"
-            width={400}
-            height={205}
-            className="h-24 md:h-40 w-auto"
+            width={200}
+            height={127}
+            className="h-[127px] w-auto"
             priority
           />
         </Link>
-      </div>
-
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex justify-center items-center pb-4 gap-8">
-        {navItems.map((item) => (
-          <div
-            key={item.label}
-            className="relative group"
-            onMouseEnter={() =>
-              item.children && setOpenDropdown(item.label)
-            }
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
-            {item.children ? (
-              <button className="text-xs tracking-[2px] uppercase font-light text-black hover:opacity-60 transition-opacity">
-                {item.label}
-              </button>
-            ) : (
-              <Link
-                href={item.href}
-                className="text-xs tracking-[2px] uppercase font-light text-black hover:opacity-60 transition-opacity"
-              >
-                {item.label}
-              </Link>
-            )}
-            {item.children && openDropdown === item.label && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-md py-2 min-w-[200px] z-50">
-                {item.children.map((child) => (
-                  <Link
-                    key={child.label}
-                    href={child.href}
-                    className="block px-6 py-2 text-xs tracking-[1.5px] uppercase font-light text-black hover:opacity-60 transition-opacity"
-                  >
-                    {child.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </nav>
-
-      {/* Mobile Hamburger */}
-      <div className="md:hidden flex justify-end px-6 pb-4">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="text-black"
@@ -122,7 +132,7 @@ export default function Header() {
                         openDropdown === item.label ? null : item.label
                       )
                     }
-                    className="block w-full text-left py-3 text-xs tracking-[2px] uppercase font-light text-black"
+                    className="block w-full text-left py-3 nav-link"
                   >
                     {item.label}
                   </button>
@@ -131,7 +141,7 @@ export default function Header() {
                       <Link
                         key={child.label}
                         href={child.href}
-                        className="block py-2 pl-4 text-xs tracking-[1.5px] uppercase font-light text-black"
+                        className="block py-2 pl-4 nav-link"
                         onClick={() => setMobileOpen(false)}
                       >
                         {child.label}
@@ -141,7 +151,7 @@ export default function Header() {
               ) : (
                 <Link
                   href={item.href}
-                  className="block py-3 text-xs tracking-[2px] uppercase font-light text-black"
+                  className="block py-3 nav-link"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}

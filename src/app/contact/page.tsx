@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import type { Metadata } from "next";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -26,29 +25,27 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission would go here
-    alert("Thank you for your message! We will get back to you soon.");
+    alert("Thank you for contacting Chisa Blair Weddings & Events. I will be in touch soon. Cheers!");
   };
 
   return (
-    <section className="py-16 md:py-24 px-6">
+    <section className="py-16 md:py-24 px-[6%]">
       <div className="max-w-2xl mx-auto">
-        <h1 className="font-serif text-3xl md:text-4xl font-normal mb-4 text-center leading-tight">
+        <h1 className="font-serif text-[46px] font-medium mb-4 text-center leading-[1.33]">
           Contact Us
         </h1>
-        <p className="text-sm leading-7 font-light mb-4 text-center">
+        <p className="text-lg leading-8 font-light mb-4 text-center">
           Contact us to schedule your FREE consultation. Complete the form, or
           send an email. Be sure to include your event date and the anticipated
           number of guests.
         </p>
-        <p className="text-sm font-light mb-10 text-center italic">
+        <p className="text-lg font-light mb-10 text-center italic">
           No Stress - Just Enjoy.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Subject */}
           <div>
-            <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+            <label className="block text-base font-light mb-2">
               Subject <span className="text-red-500">*</span>
             </label>
             <input
@@ -57,14 +54,13 @@ export default function ContactPage() {
               required
               value={formData.subject}
               onChange={handleChange}
-              className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors"
+              className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors"
             />
           </div>
 
-          {/* Name Row */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+              <label className="block text-base font-light mb-2">
                 First Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -73,11 +69,11 @@ export default function ContactPage() {
                 required
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors"
+                className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors"
               />
             </div>
             <div>
-              <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+              <label className="block text-base font-light mb-2">
                 Last Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -86,14 +82,13 @@ export default function ContactPage() {
                 required
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors"
+                className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors"
               />
             </div>
           </div>
 
-          {/* Email */}
           <div>
-            <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+            <label className="block text-base font-light mb-2">
               Email <span className="text-red-500">*</span>
             </label>
             <input
@@ -102,13 +97,12 @@ export default function ContactPage() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors"
+              className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors"
             />
           </div>
 
-          {/* Phone */}
           <div>
-            <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+            <label className="block text-base font-light mb-2">
               Phone
             </label>
             <input
@@ -116,14 +110,13 @@ export default function ContactPage() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors"
+              className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors"
             />
           </div>
 
-          {/* Event Date & Guests Row */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+              <label className="block text-base font-light mb-2">
                 Event Date
               </label>
               <input
@@ -131,11 +124,11 @@ export default function ContactPage() {
                 name="eventDate"
                 value={formData.eventDate}
                 onChange={handleChange}
-                className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors"
+                className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors"
               />
             </div>
             <div>
-              <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+              <label className="block text-base font-light mb-2">
                 Estimated # of Guests <span className="text-red-500">*</span>
               </label>
               <input
@@ -144,14 +137,13 @@ export default function ContactPage() {
                 required
                 value={formData.guests}
                 onChange={handleChange}
-                className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors"
+                className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors"
               />
             </div>
           </div>
 
-          {/* Event Type */}
           <div>
-            <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+            <label className="block text-base font-light mb-2">
               Event Type <span className="text-red-500">*</span>
             </label>
             <select
@@ -159,7 +151,7 @@ export default function ContactPage() {
               required
               value={formData.eventType}
               onChange={handleChange}
-              className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors bg-white"
+              className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors bg-white"
             >
               <option value="">Select an event type</option>
               <option value="casa-vino">Casa Vino Wine Pairing</option>
@@ -171,9 +163,8 @@ export default function ContactPage() {
             </select>
           </div>
 
-          {/* Message */}
           <div>
-            <label className="block text-xs tracking-[1px] uppercase font-light mb-2">
+            <label className="block text-base font-light mb-2">
               Message <span className="text-red-500">*</span>
             </label>
             <textarea
@@ -183,11 +174,10 @@ export default function ContactPage() {
               placeholder="Tell us about your event?"
               value={formData.message}
               onChange={handleChange}
-              className="w-full border border-gray-300 px-4 py-3 text-sm font-light focus:outline-none focus:border-black transition-colors resize-none"
+              className="w-full border border-gray-300 px-4 py-3 text-base font-light focus:outline-none focus:border-black transition-colors resize-none"
             />
           </div>
 
-          {/* Submit */}
           <div className="text-center">
             <button type="submit" className="btn-primary cursor-pointer">
               Submit

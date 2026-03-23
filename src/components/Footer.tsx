@@ -1,13 +1,11 @@
-import Link from "next/link";
-
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 py-12">
+    <footer className="bg-white py-12">
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Social Icons */}
         <div className="flex justify-center gap-6 mb-6">
           <a
-            href="https://www.instagram.com/chisablair"
+            href="https://www.instagram.com/chisablair_events/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:opacity-60 transition-opacity"
@@ -18,7 +16,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://www.facebook.com/chisablair"
+            href="https://www.facebook.com/chisablairevents"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:opacity-60 transition-opacity"
@@ -29,7 +27,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://www.pinterest.com/chisablair"
+            href="https://www.pinterest.com/chisablairevents"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:opacity-60 transition-opacity"
@@ -43,7 +41,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="space-y-2">
-          <p className="text-xs tracking-[1.5px] uppercase font-light">
+          <p className="text-base font-light">
             <a
               href="mailto:info@chisablair.com"
               className="hover:opacity-60 transition-opacity"
@@ -51,7 +49,7 @@ export default function Footer() {
               info@chisablair.com
             </a>
           </p>
-          <p className="text-xs tracking-[1.5px] uppercase font-light">
+          <p className="text-base font-light">
             Washington | Idaho
           </p>
         </div>

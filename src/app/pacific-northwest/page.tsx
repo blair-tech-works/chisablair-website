@@ -20,17 +20,17 @@ export default function PacificNorthwestPage() {
           priority
         />
         <div className="relative z-10 text-center text-white">
-          <h1 className="font-serif text-3xl md:text-5xl font-normal mb-4 leading-tight drop-shadow-lg">
+          <h1 className="font-serif text-[46px] font-medium mb-4 leading-[1.33] drop-shadow-lg">
             Washington & Idaho
           </h1>
-          <p className="text-sm tracking-[1px] font-light mb-10 drop-shadow-md">
+          <p className="text-lg font-light mb-10 drop-shadow-md">
             Your options have no borders.
           </p>
           <a
             href="https://squareup.com/appointments/book/wbp736q14ceh80/LHXAXTXBFAJXM/services"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-white text-black rounded-full text-xs tracking-[2px] uppercase font-light hover:opacity-80 transition-opacity"
+            className="btn-primary !bg-white !text-black"
           >
             Book Now
           </a>

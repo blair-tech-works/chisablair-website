@@ -30,7 +30,7 @@ export default function CorporateNonprofitPage() {
           priority
         />
         <div className="relative z-10 text-center text-white">
-          <h1 className="font-serif text-3xl md:text-5xl font-normal leading-tight drop-shadow-lg">
+          <h1 className="font-serif text-[46px] font-medium leading-[1.33] drop-shadow-lg">
             Corporate, Nonprofit & Networking Events
           </h1>
         </div>
@@ -38,9 +38,9 @@ export default function CorporateNonprofitPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 px-6">
+      <section className="py-16 md:py-20 px-[6%]">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-sm tracking-[0.5px] font-light mb-8">
+          <p className="text-lg font-light mb-8">
             Schedule your FREE consultation to learn more about our services
           </p>
           <Link href="/contact" className="btn-primary">
@@ -50,15 +50,15 @@ export default function CorporateNonprofitPage() {
       </section>
 
       {/* Services */}
-      <section className="py-16 md:py-20 px-6 bg-gray-50">
+      <section className="py-16 md:py-20 px-[6%] bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-normal mb-4">
+          <h2 className="font-serif text-[36px] font-medium mb-4 leading-[1.33]">
             Full Design & Day of Coordination
           </h2>
-          <p className="text-xs tracking-[1.5px] uppercase font-light mb-8">
+          <p className="text-lg font-light mb-8">
             Contact for Pricing
           </p>
-          <ul className="space-y-2 text-sm font-light mb-10">
+          <ul className="space-y-2 text-lg font-light mb-10">
             <li>Fundraisers</li>
             <li>Training</li>
             <li>Networking</li>

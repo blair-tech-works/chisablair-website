@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,12 +41,8 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <section className="py-16 md:py-24 px-6">
+    <section className="py-16 md:py-24 px-[6%]">
       <div className="max-w-5xl mx-auto">
-        <h1 className="font-serif text-3xl md:text-5xl font-normal mb-12 text-center leading-tight">
-          Blog
-        </h1>
-
         <div className="grid md:grid-cols-2 gap-10">
           {blogPosts.map((post) => (
             <article key={post.slug} className="group">
@@ -59,16 +54,16 @@ export default function BlogPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <p className="text-xs tracking-[1px] uppercase font-light text-gray-500 mb-2">
+              <p className="text-base font-light text-gray-500 mb-2">
                 {post.date}
               </p>
-              <h2 className="font-serif text-xl md:text-2xl font-normal mb-3">
+              <h2 className="font-serif text-[28px] font-medium mb-3 leading-[1.33]">
                 {post.title}
               </h2>
-              <p className="text-sm font-light leading-6 text-gray-700 mb-4">
+              <p className="text-lg font-light leading-7 text-gray-700 mb-4">
                 {post.excerpt}
               </p>
-              <span className="text-xs tracking-[2px] uppercase font-light text-black hover:opacity-60 transition-opacity cursor-pointer">
+              <span className="text-lg font-light text-black underline underline-offset-4 hover:opacity-60 transition-opacity cursor-pointer">
                 Read More
               </span>
             </article>
