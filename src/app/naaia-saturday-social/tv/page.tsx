@@ -42,9 +42,14 @@ export default function NaaiaTvBoard() {
       <div className="ntv-c2" aria-hidden />
 
       <header className="ntv-head">
-        <div>
-          <div className="ntv-kicker">NAAIA · Seattle Development Chapter</div>
-          <div className="ntv-org">National African American Insurance Association</div>
+        <div className="ntv-brand">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="ntv-naaia"
+            src="/images/naaia-logo-white.svg"
+            alt="NAAIA — National African American Insurance Association"
+          />
+          <div className="ntv-kicker">Seattle Development Chapter</div>
         </div>
         <div className="ntv-status">
           <div className={`ntv-live${live ? " on" : ""}`}>
@@ -96,8 +101,13 @@ export default function NaaiaTvBoard() {
 
       <footer className="ntv-foot">
         <div className="ntv-partner">
-          <div className="ntv-logo">Frichette logo</div>
-          <span>In partnership with Frichette Winery</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="ntv-frichette"
+            src="/images/frichette-logo.png"
+            alt="Frichette Winery"
+          />
+          <span>In partnership with Frichette Winery · Benton City, WA</span>
         </div>
         <div className="ntv-tag">It&apos;s Time. Let&apos;s Go!</div>
       </footer>
@@ -114,9 +124,10 @@ const CSS = `
 .ntv-c2{position:absolute;right:12vw;bottom:-16vh;width:22vw;height:22vw;border-radius:50%;
   background:rgba(198,161,91,.12);pointer-events:none;}
 .ntv-head,.ntv-main,.ntv-foot{position:relative;z-index:1;}
-.ntv-head{display:flex;justify-content:space-between;align-items:center;padding:4vh 4vw 0;}
+.ntv-head{display:flex;justify-content:space-between;align-items:flex-start;padding:4vh 4vw 0;}
+.ntv-brand{display:flex;flex-direction:column;gap:1.5vh;}
+.ntv-naaia{height:6.2vh;width:auto;display:block;}
 .ntv-kicker{font-size:1.25vw;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#c6a15b;}
-.ntv-org{margin-top:.8vh;font-size:.95vw;letter-spacing:.22em;text-transform:uppercase;color:rgba(238,243,250,.5);}
 .ntv-status{display:flex;align-items:center;gap:1.7vw;}
 .ntv-live{display:inline-flex;align-items:center;gap:.55vw;font-size:1.0vw;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,243,250,.6);}
 .ntv-live i{width:.6vw;height:.6vw;border-radius:50%;background:#55708f;}
@@ -147,9 +158,7 @@ const CSS = `
 .ntv-reg-s{margin-top:.6vh;font-size:1.0vw;font-style:italic;color:rgba(238,243,250,.5);}
 .ntv-foot{display:flex;justify-content:space-between;align-items:center;padding:0 4vw 4vh;}
 .ntv-partner{display:flex;align-items:center;gap:1.4vw;}
-.ntv-logo{width:11vw;height:4.6vh;display:flex;align-items:center;justify-content:center;
-  border:1px dashed rgba(238,243,250,.3);border-radius:.4vw;font-size:.85vw;letter-spacing:.15em;
-  text-transform:uppercase;color:rgba(238,243,250,.5);}
+.ntv-frichette{height:4.8vh;width:auto;display:block;}
 .ntv-partner span{font-size:1.0vw;color:rgba(238,243,250,.65);}
 .ntv-tag{font-family:"Bodoni Moda",serif;font-style:italic;font-size:1.9vw;color:#e6c97a;}
 `;

@@ -25,14 +25,18 @@ export default function NaaiaSaturdaySocialPage() {
           />
 
           <div className="relative">
-            <div className="font-sans text-[13px] font-medium uppercase tracking-[0.34em] text-[#c6a15b]">
-              NAAIA · Seattle Development Chapter
-            </div>
-            <div className="mt-2 font-sans text-[12px] uppercase tracking-[0.28em] text-white/55">
-              National African American Insurance Association
+            {/* NAAIA logo — top & most prominent */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/naaia-logo-white.svg"
+              alt="NAAIA — National African American Insurance Association"
+              className="h-14 w-auto sm:h-[72px]"
+            />
+            <div className="mt-6 font-sans text-[13px] font-medium uppercase tracking-[0.34em] text-[#c6a15b]">
+              Seattle Development Chapter
             </div>
 
-            <h1 className="mt-7 font-serif text-[clamp(44px,7vw,74px)] leading-[0.98] tracking-[-0.01em]">
+            <h1 className="mt-5 font-serif text-[clamp(44px,7vw,74px)] leading-[0.98] tracking-[-0.01em]">
               Saturday Social
             </h1>
             <p className="mt-3 font-sans text-[clamp(16px,2.4vw,21px)] font-light text-white/90">
@@ -101,16 +105,20 @@ export default function NaaiaSaturdaySocialPage() {
         {/* Partner / footer */}
         <footer className="flex flex-col items-center justify-between gap-6 border-t border-[#e4e7ee] bg-white px-[8%] py-7 sm:flex-row">
           <div className="flex items-center gap-5">
-            {/* Frichette logo placeholder */}
-            <div className="flex h-14 w-36 items-center justify-center rounded border border-dashed border-[#c3cad6] bg-[#f6f8fb]">
-              <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#9aa3b2]">
-                Frichette logo
-              </span>
+            {/* Frichette logo — white wordmark, shown on a navy chip */}
+            <div className="flex h-16 items-center rounded-md bg-[#13294b] px-5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/frichette-logo.png"
+                alt="Frichette Winery"
+                className="h-7 w-auto"
+              />
             </div>
             <div className="font-sans text-[12px] leading-snug text-[#6b7382]">
               In partnership with
               <br />
               <span className="font-medium text-[#13294b]">Frichette Winery</span>
+              <span className="block text-[11px] text-[#8a93a3]">Red Mountain · Benton City, WA</span>
             </div>
           </div>
 
@@ -140,8 +148,17 @@ function DetailRow({ k, children }: { k: string; children: React.ReactNode }) {
 const PRINT_CSS = `
 .naaia-flyer{ background:#eef1f6; padding:40px 24px; }
 @media print{
-  @page{ size: letter portrait; margin:.4in; }
+  @page{ size: letter portrait; margin:.35in; }
+  /* Hide the site chrome (nav + global footer) so only the flyer prints */
+  body > header, body > footer{ display:none !important; }
+  body, main{ display:block !important; min-height:0 !important; }
   .naaia-flyer{ background:#fff; padding:0; }
-  .naaia-flyer article{ max-width:none; box-shadow:none; }
+  .naaia-flyer article{ max-width:none; width:100%; box-shadow:none; }
+  /* Keep details + register side-by-side and tighten to one page */
+  .naaia-flyer article > header{ padding-top:1.9rem !important; padding-bottom:1.5rem !important; }
+  .naaia-flyer article > header h1{ margin-top:.9rem !important; }
+  .naaia-flyer section{ grid-template-columns:1.35fr 1fr !important; column-gap:2.25rem !important;
+    row-gap:0 !important; padding-top:1.5rem !important; padding-bottom:1.25rem !important; }
+  .naaia-flyer article > footer{ padding-top:1rem !important; padding-bottom:.85rem !important; }
 }
 `;
