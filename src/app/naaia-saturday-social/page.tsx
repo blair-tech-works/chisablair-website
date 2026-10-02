@@ -60,9 +60,9 @@ export default function NaaiaSaturdaySocialPage() {
             <p className="font-sans text-[15px] font-light leading-[1.8] text-[#394150]">
               Join the NAAIA Seattle Development Chapter for one of our Saturday Socials — an
               afternoon of connection and great wine. We&apos;re pouring with{" "}
-              <span className="font-medium text-[#13294b]">Frichette Winery</span> at WeRise, with
-              guided tasting flights led throughout the afternoon. Bring a colleague, meet the
-              chapter, and settle in.
+              <span className="font-medium text-[#13294b]">Frichette Winery</span> at WeRise Wine
+              Bar, with guided tasting flights led throughout the afternoon. Bring a colleague, meet
+              the chapter, and settle in.
             </p>
 
             <div className="mt-8 space-y-5">
@@ -71,8 +71,8 @@ export default function NaaiaSaturdaySocialPage() {
                 <span className="font-medium">5:00 PM</span>
               </DetailRow>
               <DetailRow k="Where">
-                WeRise · Seattle, WA
-                <span className="block text-[13px] text-[#8a93a3]">Address to follow</span>
+                WeRise Wine Bar · Seattle
+                <span className="block text-[13px] text-[#8a93a3]">1913 2nd Ave, Seattle, WA</span>
               </DetailRow>
               <DetailRow k="When">
                 Saturday, October 24, 2026 · 3:00 – 6:00 PM
@@ -85,40 +85,41 @@ export default function NaaiaSaturdaySocialPage() {
             <div className="font-sans text-[11px] font-semibold uppercase tracking-[0.26em] text-[#2f6db0]">
               Pre-Register
             </div>
-            {/* Eventbrite QR placeholder */}
-            <div className="mt-4 flex h-40 w-40 items-center justify-center rounded-md border-2 border-dashed border-[#c3cad6] bg-white">
-              <span className="px-3 text-center font-sans text-[11px] uppercase tracking-[0.18em] text-[#9aa3b2]">
-                Eventbrite
-                <br />
-                QR code
-              </span>
+            {/* Eventbrite QR */}
+            <div className="mt-4 rounded-md border border-[#e4e7ee] bg-white p-2 shadow-sm">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/eventbrite-qr.png"
+                alt="Scan to register on Eventbrite"
+                className="h-36 w-36"
+              />
             </div>
             <div className="mt-4 font-sans text-[13px] text-[#394150]">
-              Scan or register on <span className="font-medium">Eventbrite</span>
+              Scan to register on <span className="font-medium">Eventbrite</span>
             </div>
-            <div className="mt-1 font-sans text-[12px] italic text-[#8a93a3]">
-              Registration link to follow
+            <div className="mt-1 font-sans text-[12px] text-[#6b7382]">
+              eventbrite.com/e/2002798474150
             </div>
+            <div className="mt-1 font-sans text-[12px] font-medium text-[#2f6db0]">Free RSVP</div>
           </aside>
         </section>
 
         {/* Partner / footer */}
         <footer className="flex flex-col items-center justify-between gap-6 border-t border-[#e4e7ee] bg-white px-[8%] py-7 sm:flex-row">
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
+            {/* WeRise venue mark */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/werise-logo.png" alt="WeRise Wines" className="h-11 w-auto" />
             {/* Frichette logo — white wordmark, shown on a navy chip */}
-            <div className="flex h-16 items-center rounded-md bg-[#13294b] px-5">
+            <div className="flex h-14 items-center rounded-md bg-[#13294b] px-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/frichette-logo.png"
-                alt="Frichette Winery"
-                className="h-7 w-auto"
-              />
+              <img src="/images/frichette-logo.png" alt="Frichette Winery" className="h-6 w-auto" />
             </div>
-            <div className="font-sans text-[12px] leading-snug text-[#6b7382]">
-              In partnership with
+            <div className="font-sans text-[11px] leading-snug text-[#6b7382]">
+              At <span className="font-medium text-[#13294b]">WeRise Wine Bar</span> · featuring
               <br />
               <span className="font-medium text-[#13294b]">Frichette Winery</span>
-              <span className="block text-[11px] text-[#8a93a3]">Red Mountain · Benton City, WA</span>
+              <span className="block text-[10px] text-[#8a93a3]">Red Mountain · Benton City, WA</span>
             </div>
           </div>
 

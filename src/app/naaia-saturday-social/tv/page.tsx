@@ -65,7 +65,7 @@ export default function NaaiaTvBoard() {
         <div className="ntv-left">
           <h1 className="ntv-title">Saturday Social</h1>
           <div className="ntv-feat">
-            Featuring <b>Frichette Winery</b> · at WeRise
+            Featuring <b>Frichette Winery</b> · at WeRise Wine Bar
           </div>
 
           <div className="ntv-date">
@@ -80,7 +80,7 @@ export default function NaaiaTvBoard() {
             </div>
             <div className="ntv-row">
               <span className="ntv-k">Where</span>
-              <span className="ntv-v">WeRise · Seattle, WA</span>
+              <span className="ntv-v">WeRise Wine Bar · 1913 2nd Ave, Seattle</span>
             </div>
           </div>
         </div>
@@ -88,26 +88,23 @@ export default function NaaiaTvBoard() {
         <aside className="ntv-reg">
           <div className="ntv-reg-k">Pre-Register</div>
           <div className="ntv-qr">
-            <span>
-              Eventbrite
-              <br />
-              QR code
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/eventbrite-qr.png" alt="Scan to register on Eventbrite" />
           </div>
-          <div className="ntv-reg-v">Scan to register</div>
-          <div className="ntv-reg-s">Link to follow</div>
+          <div className="ntv-reg-v">Scan to register · Free RSVP</div>
+          <div className="ntv-reg-s">eventbrite.com/e/2002798474150</div>
         </aside>
       </main>
 
       <footer className="ntv-foot">
         <div className="ntv-partner">
+          <div className="ntv-werise-chip">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="ntv-werise" src="/images/werise-logo.png" alt="WeRise Wines" />
+          </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="ntv-frichette"
-            src="/images/frichette-logo.png"
-            alt="Frichette Winery"
-          />
-          <span>In partnership with Frichette Winery · Benton City, WA</span>
+          <img className="ntv-frichette" src="/images/frichette-logo.png" alt="Frichette Winery" />
+          <span>At WeRise Wine Bar · featuring Frichette Winery · Benton City, WA</span>
         </div>
         <div className="ntv-tag">It&apos;s Time. Let&apos;s Go!</div>
       </footer>
@@ -152,12 +149,14 @@ const CSS = `
   background:rgba(255,255,255,.05);border:1px solid rgba(238,243,250,.14);border-radius:1vw;padding:3vh 2vw;}
 .ntv-reg-k{font-size:1.0vw;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#4f93d6;}
 .ntv-qr{margin:2vh 0;width:12vw;height:12vw;display:flex;align-items:center;justify-content:center;
-  border:.3vw dashed rgba(238,243,250,.3);border-radius:.6vw;background:rgba(255,255,255,.04);}
-.ntv-qr span{font-size:.95vw;letter-spacing:.12em;text-transform:uppercase;color:rgba(238,243,250,.55);line-height:1.5;}
+  border-radius:.6vw;background:#fff;padding:.8vw;}
+.ntv-qr img{width:100%;height:100%;display:block;}
 .ntv-reg-v{font-size:1.25vw;font-weight:500;}
 .ntv-reg-s{margin-top:.6vh;font-size:1.0vw;font-style:italic;color:rgba(238,243,250,.5);}
 .ntv-foot{display:flex;justify-content:space-between;align-items:center;padding:0 4vw 4vh;}
-.ntv-partner{display:flex;align-items:center;gap:1.4vw;}
+.ntv-partner{display:flex;align-items:center;gap:1.2vw;}
+.ntv-werise-chip{display:flex;align-items:center;background:#f5eee4;border-radius:.5vw;padding:.9vh 1vw;}
+.ntv-werise{height:3.8vh;width:auto;display:block;}
 .ntv-frichette{height:4.8vh;width:auto;display:block;}
 .ntv-partner span{font-size:1.0vw;color:rgba(238,243,250,.65);}
 .ntv-tag{font-family:"Bodoni Moda",serif;font-style:italic;font-size:1.9vw;color:#e6c97a;}
